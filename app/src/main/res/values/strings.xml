@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Tour Guide App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_travel_tools">TRAVEL TOOLS</string>
+    <string name="category_poi">PLACES OF INTEREST</string>
+    <string name="category_sights">SIGHTS</string>
+    <string name="parthenon">#1 The architecture miracle of ancient Greece Parthenon</string>
+    <string name="agora">#2 The magnificent ancient Roman Agora</string>
+    <string name="anafiotika">#3 One of the most historic neighborhoods in athens with the breathtaking view</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="night">NightLife</string>
+    <string name="museums">Museums</string>
+    <string name="weather">Weather</string>
+    <string name="transport">Transport</string>
+    <string name="currency">Currency</string>
+
+</resources>
