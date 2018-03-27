@@ -36,26 +36,38 @@ public class PlacesOfInterestFragment extends Fragment {
         listView.setAdapter(adapter);
 
 
-       //not working right now does not show anything
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(mMessageClickedHandler);
 
 
-            @Override
-            public void onItemClick(AdapterView<?> adapter, View v, int position,
-                                    long arg3) {
-                //TourItem value = (TourItem) adapter.getItemAtPosition(position);
-                Toast.makeText(getContext(),"mphkame",Toast.LENGTH_LONG).show();
-            }
-        });
+//       //not working right now does not show anything
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//
+//            @Override
+//            public void onItemClick(AdapterView<?> adapter, View v, int position,
+//                                    long arg3) {
+//                //TourItem value = (TourItem) adapter.getItemAtPosition(position);
+//                Toast.makeText(getContext(),"mphkame",Toast.LENGTH_LONG).show();
+//            }
+//        });
 
         return rootView;
 
     }
 
 
+    //error without importing class
+    //it show nothing when I select an item
+    private AdapterView.OnItemClickListener mMessageClickedHandler = new AdapterView.OnItemClickListener() {
+        public void onItemClick(AdapterView parent, View v, int position, long id)
+        {
+
+            Toast.makeText(getContext(),"You've got an event",Toast.LENGTH_SHORT).show();
+        }
+    };
 
 
-//TODO make this listener work
+    //TODO make this listener work
     private void setOnItemClickListener(ListView list, final ArrayList<TourItem> tourItems) {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
