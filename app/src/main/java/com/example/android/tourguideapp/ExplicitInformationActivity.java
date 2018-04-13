@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class ExplicitPoiActivity extends AppCompatActivity {
+public class ExplicitInformationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,11 +13,12 @@ public class ExplicitPoiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_explicit_poi);
 
 
+        //we get the Intent coming from the click of an item in our app and store the description
         Intent mIntent = getIntent();
-        int description = mIntent.getIntExtra("d",0);
+        int description = mIntent.getIntExtra(Integer.toString(R.string.description),0);
 
 
-
+        //here depending on the button we handle the applicable link
         switch (description) {
 
             case R.string.restaurants: goToUrl("https://www.tripadvisor.com.gr/Restaurants-g29209-Athens_Georgia.html");
@@ -38,14 +39,25 @@ public class ExplicitPoiActivity extends AppCompatActivity {
                 break;
             case R.string.agora: goToUrl("https://www.tripadvisor.com.gr/Attraction_Review-g189400-d242841-Reviews-Roman_Agora-Athens_Attica.html");
                 break;
+            case R.string.ermou: goToUrl("https://www.athensguide.com/ermou/index.htm");
+                break;
+            case R.string.mall: goToUrl("https://themallathens.gr/gre/");
+                break;
+            case R.string.golden_hall: goToUrl("https://goldenhall.gr/gr/");
+                break;
+            default: goToUrl("https://www.dafont.com/good-day.font");
 
         }
+        //this line is to avoid a return to an empty activity
+        finish();
+
     }
 
-
+    //this function starts an Intent to visit a url
     private void goToUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
+        Uri myUrl = Uri.parse(url);
+        Intent openBrowser = new Intent(Intent.ACTION_VIEW, myUrl);
+        startActivity(openBrowser);
+
     }
 }
