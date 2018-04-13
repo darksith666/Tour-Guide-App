@@ -24,14 +24,16 @@ public class TourFragmentPagerAdapter extends FragmentPagerAdapter{
             return new SightsFragment();
         }else if(position==1){
             return new PlacesOfInterestFragment();
-        }else{
+        }else if(position==2){
             return new TravelToolsFragment();
+        }else{
+            return new ShoppingFragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     @Override
@@ -40,8 +42,10 @@ public class TourFragmentPagerAdapter extends FragmentPagerAdapter{
             return mContext.getString(R.string.category_sights);
         } else if (position == 1) {
             return mContext.getString(R.string.category_poi);
-        } else {
+        } else if (position==2) {
             return mContext.getString(R.string.category_travel_tools);
+        }else{
+            return mContext.getString(R.string.category_shopping);
         }
     }
 }

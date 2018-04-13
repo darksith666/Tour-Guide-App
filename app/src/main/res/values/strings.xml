@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">Tour Guide App</string>
+    <string name="app_name">Athens In A Nutshell</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="category_travel_tools">TRAVEL TOOLS</string>
     <string name="category_poi">PLACES OF INTEREST</string>
     <string name="category_sights">SIGHTS</string>
+    <string name="category_shopping">SHOPPING</string>
     <string name="parthenon">#1 The architecture miracle of ancient Greece Parthenon</string>
     <string name="agora">#2 The magnificent ancient Roman Agora</string>
     <string name="anafiotika">#3 One of the most historic neighborhoods in athens with the breathtaking view</string>
@@ -15,5 +16,8 @@
     <string name="weather">Weather</string>
     <string name="transport">Transport</string>
     <string name="currency">Currency</string>
-
+    <string name="description">description</string>
+    <string name="ermou">Ermou Street</string>
+    <string name="mall">The Mall</string>
+    <string name="golden_hall">Golden Hall</string>
 </resources>

@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -34,7 +33,6 @@ public class ItemAdapter extends ArrayAdapter<TourItem> {
 
         }
 
-
         final TourItem currentItem = getItem(position);
 
         //it fills the image with the current imageresource
@@ -50,9 +48,6 @@ public class ItemAdapter extends ArrayAdapter<TourItem> {
             TextView currentDescription = (TextView) listItemView.findViewById(R.id.descr_2);
             currentDescription.setText(currentItem.getDescription());
             }
-
-
-        Toast.makeText(getContext(),"poi poi poi poi",Toast.LENGTH_LONG).show();
 
         return listItemView;
     }
